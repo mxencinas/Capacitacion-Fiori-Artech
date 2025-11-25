@@ -53,3 +53,12 @@ btnAdd.addEventListener("click", () =>{
     renderTodoItem(inputText);
 
 })
+
+
+todoList.addEventListener("click", (event) => {
+    
+    if (event.target.classList.contains("btn-delete")) {
+        const item = event.target.closest("li"); 
+        item.remove(); 
+    }
+});
